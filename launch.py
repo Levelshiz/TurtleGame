@@ -1,3 +1,4 @@
-import game.engine as gm
+from game.engine import Engine
+game = Engine()
 
-gm.start()
+game.start()
