@@ -14,6 +14,8 @@ class Food (Turtle):
         self.change_position()
         self.shapesize(0.5,0.5)
     def change_position (self):
+        """Добавляет случайное появление еды"""
+
         x = random.randint(-WINDOW_WIDTH // 2 + 50, WINDOW_WIDTH // 2 - 50)
         y = random.randint(-WINDOW_HEIGHT // 2 + 50, WINDOW_HEIGHT // 2 - 50)
         self.teleport(x,y)

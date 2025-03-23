@@ -59,6 +59,7 @@ class Player(Turtle):
 
 
     def move (self):
+        """Создаёт границы экрана"""
         if self.dx == 0 and self.dy == 0: return
 
         self.forward(self._speed)
@@ -76,6 +77,7 @@ class Player(Turtle):
 
 
     def check_food(self,food):
+        """Проверяет расстояние до еды и добавляет скорость"""
 
 
         if self.distance(food) < 10 :
