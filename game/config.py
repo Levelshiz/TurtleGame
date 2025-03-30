@@ -14,6 +14,10 @@ MOVE_DOWN = config.get('Controls', 'MOVE_DOWN', fallback="s")
 MOVE_LEFT = config.get('Controls', 'MOVE_LEFT', fallback="a")
 MOVE_RIGHT = config.get('Controls', 'MOVE_RIGHT', fallback="d")
 
+#Enemies
+SPAWN_INTERVAL = int(config.get('Enemies','SPAWN_INTERVAL',fallback=5))
+DAMAGE = int(config.get('Enemies','DAMAGE',fallback=25))
+
 if __name__ == '__main__':
     print(f"MAX_HP: {MAX_HP}")
     print(f"WINDOW_WIDTH: {WINDOW_WIDTH}")
