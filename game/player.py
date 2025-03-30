@@ -82,7 +82,19 @@ class Player(Turtle):
 
         if self.distance(food) < 10 :
             self.food.change_position()
-            self._speed +=0.5
+            self._HP += 10
+            if self._HP > MAX_HP:
+                self._HP = MAX_HP
+            print(f'{self._HP}/{MAX_HP}')
 
 
 
+
+
+    def take_damage(self,damage):
+        """Получение урона"""
+        if damage > 0 and self._HP > 0:
+            self._HP -= damage
+            print (f'Осталось здоровья:{self._HP}/{MAX_HP}')
+            if self._HP <= 0:
+                print ("Черепащка умерла")
