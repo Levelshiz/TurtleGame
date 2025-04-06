@@ -52,6 +52,7 @@ class Enemy(Turtle):
             self.set_random_direction()
             self.interval_angle = random.randint(1, 3)
             self.last_change_direction = time.time()
+
     def check_player(self,player):
         """Проверяет дистанцию и меняет ее спустя время"""
         return self.distance(player) < 20
