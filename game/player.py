@@ -16,6 +16,7 @@ class Player(Turtle):
         self.setheading(90)
         self._HP = MAX_HP
         self._speed = PLAYER_SPEED
+        self.score = 0
 
 
 
@@ -77,7 +78,7 @@ class Player(Turtle):
 
 
     def check_food(self,food):
-        """Проверяет расстояние до еды и добавляет скорость"""
+        """Проверяет расстояние до еды """
 
 
         if self.distance(food) < 10 :
@@ -86,6 +87,7 @@ class Player(Turtle):
             if self._HP > MAX_HP:
                 self._HP = MAX_HP
             print(f'{self._HP}/{MAX_HP}')
+            self.ui.update_hp_display()
 
 
 
@@ -98,3 +100,8 @@ class Player(Turtle):
             print (f'Осталось здоровья:{self._HP}/{MAX_HP}')
             if self._HP <= 0:
                 print ("Черепащка умерла")
+                return
+
+            self.score += 5
+            self.ui.update_score_display()
+
